@@ -10,7 +10,7 @@
 ---
 
 PolicyName: test-app-polies
-PolicyOrder: 700
+PolicyOrder: 300
 
 ObjectType: NetworkPolicy
 PolicyNamespace: test

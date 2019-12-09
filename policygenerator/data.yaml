@@ -48,10 +48,11 @@ INGRESS:
 PolicyName: default-deny-cluster
 PolicyOrder: 1000
 
-ObjectType: GlobalNetworkPolicy
+ObjectType: NetworkPolicy
+PolicyNamespace: test
 
-AppliesToSelector: ''
-AppliesToNamespaceSelector: all()
+AppliesToSelector: all()
+AppliesToNamespaceSelector: ''
 AppliesToSvcActSelector: ''
 
 Direction: ['Ingress','Egress']
@@ -59,14 +60,4 @@ Direction: ['Ingress','Egress']
 INGRESS:
 EGRESS:
 
----
-ObjectType: GlobalNetworkSet
-NetworkSetName: allow-networks-egress
-kind: global
-
-Labels: 
-  role: DB
-  color: red
-
-CIDR: ['192.168.20.0/24', '10.20.0.0/16']
 ---

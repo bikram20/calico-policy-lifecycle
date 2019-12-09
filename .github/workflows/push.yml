@@ -1,4 +1,9 @@
-on: push
+on: 
+  push:
+    branches:
+    - master
+    paths:
+    - 'policytests/*.yaml'
 name: Validate
 jobs:
   conftest:
@@ -8,4 +13,5 @@ jobs:
     - name: calico-policy-test
       uses: instrumenta/conftest-action@master
       with:
-        files: policytests/calicopolicy.yaml
+        files: calicopolicy.yaml
+        path: ./policytests

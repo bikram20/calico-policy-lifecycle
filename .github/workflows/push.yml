@@ -15,5 +15,5 @@ jobs:
       with:
         files: calicopolicy.yaml
         path: ./policytests
-        policy: ../policytests/policy
+        policy: ./policytests/policy
 

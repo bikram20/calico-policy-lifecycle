@@ -20,22 +20,9 @@ spec:
   - action: Allow
     destination: {}
     source:
-      namespaceSelector: zone == "test1"
+      namespaceSelector: zone == "test2"
       serviceAccounts: {}
   order: 700
-  selector: all()
-  types: [Ingress, Egress]
-
----
-
-apiVersion: crd.projectcalico.org/v1
-kind: NetworkPolicy
-metadata:
-  annotations: {source: Policy enforced by <REF> cybersecurity}
-  name: default-deny-cluster
-  namespace: test
-spec:
-  order: 1000
   selector: all()
   types: [Ingress, Egress]
 

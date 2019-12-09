@@ -39,25 +39,9 @@ INGRESS:
   - IngressAction: Allow
     IngressPort: ''
     IngressProtocol: ''
-    IngressSourceNamespace: zone == "test1"
+    IngressSourceNamespace: zone == "test2"
     IngressSourceSelector: ''
     IngressSourceServiceAccount: ''
 
 ---
 
-PolicyName: default-deny-cluster
-PolicyOrder: 1000
-
-ObjectType: NetworkPolicy
-PolicyNamespace: test
-
-AppliesToSelector: all()
-AppliesToNamespaceSelector: ''
-AppliesToSvcActSelector: ''
-
-Direction: ['Ingress','Egress']
-
-INGRESS:
-EGRESS:
-
----

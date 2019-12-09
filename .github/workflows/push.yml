@@ -8,4 +8,4 @@ jobs:
     - name: calico-policy-test
       uses: instrumenta/conftest-action@master
       with:
-        files: calicopolicy.yaml
+        files: policytests/calicopolicy.yaml

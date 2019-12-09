@@ -1,4 +1,4 @@
-apiVersion: projectcalico.org/v3
+apiVersion: crd.projectcalico.org/v1
 kind: NetworkPolicy
 metadata:
   annotations: {source: Policy enforced by <REF> cybersecurity}
@@ -28,7 +28,7 @@ spec:
 
 ---
 
-apiVersion: projectcalico.org/v3
+apiVersion: crd.projectcalico.org/v1
 kind: NetworkPolicy
 metadata:
   annotations: {source: Policy enforced by <REF> cybersecurity}

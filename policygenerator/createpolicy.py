@@ -1,7 +1,8 @@
 # value contains policy parameters. createpolicy will generate a json and dump it as YAML
 def createcalicopolicy(value):
     basepol = {}
-    basepol['apiVersion'] = 'projectcalico.org/v3'
+    #basepol['apiVersion'] = 'projectcalico.org/v3'
+    basepol['apiVersion'] = 'crd.projectcalico.org/v1'
     basepol['kind'] = value['ObjectType']
 
 

@@ -22,7 +22,7 @@ spec:
     source:
       namespaceSelector: zone == "test1"
       serviceAccounts: {}
-  order: 300
+  order: 400
   selector: all()
   types: [Ingress, Egress]
 

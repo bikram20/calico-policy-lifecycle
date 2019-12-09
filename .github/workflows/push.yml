@@ -3,7 +3,7 @@ on:
     branches:
     - master
     paths:
-    - 'policytests/*.yaml'
+    - 'policytests/calicopolicy.yaml'
 name: Validate
 jobs:
   conftest:

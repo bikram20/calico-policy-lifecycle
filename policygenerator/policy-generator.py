@@ -9,7 +9,7 @@ def main():
 
     # basefilename for base YAML policy. policyfilename is the output
     datafile = "data.yaml"
-    policyfilename = "./generatedcalicopolicy.yaml"
+    policyfilename = "../policytests/calicopolicy.yaml"
     
     # clean the policyfilename content
     open(policyfilename, 'w').close()

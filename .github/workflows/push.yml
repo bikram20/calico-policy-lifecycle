@@ -13,7 +13,6 @@ jobs:
     - name: calico-policy-test
       uses: instrumenta/conftest-action@master
       with:
-        files: calicopolicy.yaml
-        path: ./policytests
+        files: ./policytests/calicopolicy.yaml
         policy: ./policytests/policy
 

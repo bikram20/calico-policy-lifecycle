@@ -22,19 +22,20 @@ spec:
     source:
       namespaceSelector: zone == "test1"
       serviceAccounts: {}
-  order: 300
+  order: 700
   selector: all()
   types: [Ingress, Egress]
 
 ---
 
 apiVersion: projectcalico.org/v3
-kind: GlobalNetworkPolicy
+kind: NetworkPolicy
 metadata:
   annotations: {source: Policy enforced by <REF> cybersecurity}
   name: default-deny-cluster
+  namespace: test
 spec:
-  namespaceSelector: all()
+  selector: all()
   order: 1000
   types: [Ingress, Egress]
 

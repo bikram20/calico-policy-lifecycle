@@ -1,7 +1,7 @@
 on: 
   push:
     branches:
-    - master
+    - 'team*'
     paths:
     - 'policytests/calicopolicy.yaml'
 name: Validate

@@ -1,4 +1,4 @@
-def createcaliconetworkset(value):
+def create_calico_networkset(value):
    
     baseset = {}
 

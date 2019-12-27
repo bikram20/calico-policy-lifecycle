@@ -1,0 +1,37 @@
+================
+policy_generator
+================
+
+
+.. image:: https://img.shields.io/pypi/v/policy_generator.svg
+        :target: https://pypi.python.org/pypi/policy_generator
+
+.. image:: https://img.shields.io/travis/bikram20/policy_generator.svg
+        :target: https://travis-ci.org/bikram20/policy_generator
+
+.. image:: https://readthedocs.org/projects/policy-generator/badge/?version=latest
+        :target: https://policy-generator.readthedocs.io/en/latest/?badge=latest
+        :alt: Documentation Status
+
+
+
+
+Calico Policy Generator from metadata
+
+
+* Free software: MIT license
+* Documentation: https://policy-generator.readthedocs.io.
+
+
+Features
+--------
+
+* TODO
+
+Credits
+-------
+
+This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
+
+.. _Cookiecutter: https://github.com/audreyr/cookiecutter
+.. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage

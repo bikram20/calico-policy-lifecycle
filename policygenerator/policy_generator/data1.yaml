@@ -56,8 +56,8 @@ AppliesToSvcActSelector: ''
 
 Direction: ['Ingress','Egress']
 
-INGRESS:
-EGRESS:
+INGRESS: []
+EGRESS: []
 
 ---
 ObjectType: GlobalNetworkSet

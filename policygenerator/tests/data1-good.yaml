@@ -1,0 +1,72 @@
+#
+# NOTE: All items must be filled.
+# For items not having a value, you must use ''
+# 
+# Following Calico resources are supported.
+# - NetworkPolicy
+# - GlobalNetworkPolicy
+# - GlobalNetworkSet
+#
+---
+
+PolicyName: test-app-polies
+PolicyOrder: 300
+
+ObjectType: NetworkPolicy
+PolicyNamespace: test
+
+AppliesToSelector: all()
+AppliesToNamespaceSelector: ''
+AppliesToSvcActSelector: ''
+
+Direction: ['Ingress','Egress']
+
+EGRESS:
+  - EgressAction: Allow
+    EgressPort: [8080]
+    EgressProtocol: TCP
+    EgressDestinationNamespace: ''
+    EgressDestinationSelector: ''
+    EgressDestinationServiceAccount: ''
+  - EgressAction: Allow
+    EgressPort: [8080]
+    EgressProtocol: UDP
+    EgressDestinationNamespace: ''
+    EgressDestinationSelector: ''
+    EgressDestinationServiceAccount: ''
+
+INGRESS:
+  - IngressAction: Allow
+    IngressPort: ''
+    IngressProtocol: ''
+    IngressSourceNamespace: zone == "test1"
+    IngressSourceSelector: ''
+    IngressSourceServiceAccount: ''
+
+---
+
+PolicyName: default-deny-cluster
+PolicyOrder: 1000
+
+ObjectType: GlobalNetworkPolicy
+
+AppliesToSelector: ''
+AppliesToNamespaceSelector: all()
+AppliesToSvcActSelector: ''
+
+Direction: ['Ingress','Egress']
+
+INGRESS: []
+EGRESS: []
+
+---
+ObjectType: GlobalNetworkSet
+NetworkSetName: allow-networks-egress
+kind: global
+
+Labels: 
+  role: DB
+  color: red
+
+CIDR: ['192.168.20.0/24', '10.20.0.0/16']
+---

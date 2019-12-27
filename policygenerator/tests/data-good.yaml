@@ -1,0 +1,47 @@
+#
+# NOTE: All items must be filled.
+# For items not having a value, you must use ''
+# 
+# Following Calico resources are supported.
+# - NetworkPolicy
+# - GlobalNetworkPolicy
+# - GlobalNetworkSet
+#
+---
+
+PolicyName: test-app-polies
+PolicyOrder: 700
+
+ObjectType: NetworkPolicy
+PolicyNamespace: test
+
+AppliesToSelector: all()
+AppliesToNamespaceSelector: ''
+AppliesToSvcActSelector: ''
+
+Direction: ['Ingress','Egress']
+
+EGRESS:
+  - EgressAction: Allow
+    EgressPort: [8080]
+    EgressProtocol: TCP
+    EgressDestinationNamespace: ''
+    EgressDestinationSelector: ''
+    EgressDestinationServiceAccount: ''
+  - EgressAction: Allow
+    EgressPort: [8080]
+    EgressProtocol: UDP
+    EgressDestinationNamespace: ''
+    EgressDestinationSelector: ''
+    EgressDestinationServiceAccount: ''
+
+INGRESS:
+  - IngressAction: Allow
+    IngressPort: ''
+    IngressProtocol: ''
+    IngressSourceNamespace: zone == "test2"
+    IngressSourceSelector: ''
+    IngressSourceServiceAccount: ''
+
+---
+

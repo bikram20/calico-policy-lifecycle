@@ -10,6 +10,6 @@ twine==1.14.0
 Click==7.0
 pytest==4.6.5
 pytest-runner==5.1
-pyyaml==5.2
+pyyaml==5.4
 click-log==0.3.2
 schema==0.7.1
